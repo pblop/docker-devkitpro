@@ -12,6 +12,7 @@ RUN echo "deb http://deb.debian.org/debian bullseye-backports main" > /etc/apt/s
     apt-get install -y --no-install-recommends cmake/bullseye-backports zip unzip && \
     apt-get install -y --no-install-recommends locales && \
     apt-get install -y --no-install-recommends patch && \
+    apt-get install -y --no-install-recommends ccls && \
     sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
     dpkg-reconfigure --frontend=noninteractive locales && \
     update-locale LANG=en_US.UTF-8 && \
